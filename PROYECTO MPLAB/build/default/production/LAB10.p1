@@ -412,8 +412,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "42
-[; ;LAB10.c: 42: const char data[13] = "Bienvenido :)";
-[v _data `Cuc ~T0 @X0 -> 13 `i e ]
+[; ;LAB10.c: 42: const char data[] = "Bienvenido :)";
+[v _data `Cuc ~T0 @X0 -> 14 `i e ]
 [i _data
 :U ..
 -> 66 `c
@@ -429,6 +429,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 32 `c
 -> 58 `c
 -> 41 `c
+-> 0 `c
 ..
 ]
 [v $root$_isr `(v ~T0 @X0 0 e ]

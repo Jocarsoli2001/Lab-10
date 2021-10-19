@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\PROYECTO_MPLAB.production.sym \
   --cmf=dist/default/production\PROYECTO_MPLAB.production.cmf -z -Q16F887 \
-  -oC:\Users\jocar\AppData\Local\Temp\xcAsgcg.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\jocar\AppData\Local\Temp\xcAs9io.4 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/PROYECTO_MPLAB.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o \
+  -pfunctab=ENTRY -k C:\Users\jocar\AppData\Local\Temp\xcAs9io.o \
   dist/default/production\PROYECTO_MPLAB.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
+C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
                 end_init                              C        C        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2        0       4
@@ -36,13 +36,13 @@ dist/default/production\PROYECTO_MPLAB.production.o
                 cinit                                 F        F        5        8       0
                 intentry                              4        4        8        8       0
                 config                             2007     2007        2        0       4
-                text3                                99       99        F      132       0
+                text3                                9A       9A        F      134       0
                 text2                                42       42       2E        8       0
                 text1                                14       14       2E        8       0
                 maintext                             70       70       16        8       0
                 cstackCOMMON                         70       70        6       70       1
                 bssCOMMON                            76       76        1       70       1
-                strings                              86       86       13      10C       0
+                strings                              86       86       14      10C       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -52,7 +52,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                 F        F        5         0
                 intentry                              4        4        8         0
                 reset_vec                             0        0        3         0
-                text3                                99       99        F         0
+                text3                                9A       9A        F         0
                 text2                                42       42       2E         0
                 text1                                14       14       2E         0
                 maintext                             70       70       16         0
@@ -60,7 +60,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   STRCODE        
 
         CLASS   STRING         
-                strings                              86       86       13         0
+                strings                              86       86       14         0
 
         CLASS   CONST          
 
@@ -105,8 +105,8 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
                 intentry                       000004  000082  000086         8       0  CODE        2
                 cstackCOMMON                   000070  000007  000077        70       1  COMMON      1
-                strings                        000086  000013  000099       10C       0  STRING      2
-                text3                          000099  00000F  0000A8       132       0  CODE        2
+                strings                        000086  000014  00009A       10C       0  STRING      2
+                text3                          00009A  00000F  0000A9       134       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
@@ -117,13 +117,13 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         00A8-1FFF            800
+                         00A9-1FFF            800
         COMMON           0077-007D              7           1
         CONST            0003-0003              1           2
-                         00A8-1FFF            100
+                         00A9-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         00A8-1FFF            100
+                         00A9-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0020-006F             50           1
                          00A0-00EF             50
@@ -135,9 +135,9 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         00A8-1FFF           1F58
+                         00A9-1FFF           1F57
         STRING           0003-0003              1           2
-                         00A8-1FFF            100
+                         00A9-1FFF            100
 
                                   Symbol Table
 
@@ -183,7 +183,7 @@ __Hsfr0                  sfr0         0000
 __Hsfr1                  sfr1         0000
 __Hsfr2                  sfr2         0000
 __Hsfr3                  sfr3         0000
-__Hspace_0               (abs)        00A8
+__Hspace_0               (abs)        00A9
 __Hspace_1               (abs)        0077
 __Hspace_2               (abs)        0000
 __Hspace_3               (abs)        0000
@@ -224,7 +224,7 @@ __Lspace_4               (abs)        0000
 __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Ltext                  text         0000
-__S0                     (abs)        00A8
+__S0                     (abs)        00A9
 __S1                     (abs)        0077
 __S2                     (abs)        0000
 __S3                     (abs)        0000
@@ -235,9 +235,9 @@ ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
 __end_of__initialization cinit        0010
 __end_of__stringtab      strings      008C
-__end_of_data            strings      0099
+__end_of_data            strings      009A
 __end_of_env_term        text2        0070
-__end_of_isr             text3        00A8
+__end_of_isr             text3        00A9
 __end_of_main            maintext     0086
 __end_of_setup           text1        0042
 __initialization         cinit        000F
@@ -248,7 +248,7 @@ __pmaintext              maintext     0070
 __pstrings               strings      0086
 __ptext1                 text1        0014
 __ptext2                 text2        0042
-__ptext3                 text3        0099
+__ptext3                 text3        009A
 __size_of_env_term       (abs)        0000
 __size_of_isr            (abs)        0000
 __size_of_main           (abs)        0000
@@ -258,7 +258,7 @@ __stringtab              strings      0086
 _data                    strings      008C
 _env_term                text2        0042
 _i                       bssCOMMON    0076
-_isr                     text3        0099
+_isr                     text3        009A
 _main                    maintext     0070
 _setup                   text1        0014
 btemp                    (abs)        007E
@@ -283,13 +283,13 @@ Module		Function		Class		Link	Load	Size
 shared
 		__stringtab    		STRING         	0086	0000	6
 		__initialization		CODE           	000F	0000	1
-		_data          		STRING         	008C	0000	13
+		_data          		STRING         	008C	0000	14
 
-shared estimated size: 20
+shared estimated size: 21
 
 LAB10.c
 		_main          		CODE           	0070	0000	22
-		_isr           		CODE           	0099	0000	15
+		_isr           		CODE           	009A	0000	15
 		_setup         		CODE           	0014	0000	46
 		_env_term      		CODE           	0042	0000	46
 

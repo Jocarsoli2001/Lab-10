@@ -39,7 +39,7 @@
 
 //-----------------------Variables------------------------------------
 char i = 0;
-const char data[13] = "Bienvenido :)";
+const char data[] = "Bienvenido :)";
 
 //------------Funciones sin retorno de variables----------------------
 void setup(void);                               // Función de setup

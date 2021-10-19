@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
+$C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -19,11 +19,11 @@ $dist/default/production\PROYECTO_MPLAB.production.o
 cinit CODE 0 F F 5 2
 text1 CODE 0 14 14 2E 2
 text2 CODE 0 42 42 2E 2
-text3 CODE 0 99 99 F 2
+text3 CODE 0 9A 9A F 2
 maintext CODE 0 70 70 16 2
 cstackCOMMON COMMON 1 70 70 6 1
 intentry CODE 0 4 4 8 2
-strings STRING 0 86 86 13 2
+strings STRING 0 86 86 14 2
 bssCOMMON COMMON 1 76 76 1 1
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
@@ -41,13 +41,13 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST A8-1FFF 2
+CONST A9-1FFF 2
 ENTRY 3-3 2
-ENTRY A8-1FFF 2
+ENTRY A9-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE A8-1FFF 2
+CODE A9-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -55,9 +55,9 @@ SFR3 180-18F 1
 COMMON 77-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE A8-1FFF 2
+STRCODE A9-1FFF 2
 STRING 3-3 2
-STRING A8-1FFF 2
+STRING A9-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -72,17 +72,17 @@ STRING A8-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PROYECTO_MPLAB.production.o
-F cinit CODE >503:C:\Users\jocar\AppData\Local\Temp\xcAsgcg.s
-F cinit CODE >506:C:\Users\jocar\AppData\Local\Temp\xcAsgcg.s
-F cinit CODE >517:C:\Users\jocar\AppData\Local\Temp\xcAsgcg.s
-10 cinit CODE >523:C:\Users\jocar\AppData\Local\Temp\xcAsgcg.s
-10 cinit CODE >525:C:\Users\jocar\AppData\Local\Temp\xcAsgcg.s
-11 cinit CODE >526:C:\Users\jocar\AppData\Local\Temp\xcAsgcg.s
+F cinit CODE >504:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
+F cinit CODE >507:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
+F cinit CODE >518:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
+10 cinit CODE >524:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
+10 cinit CODE >526:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
+11 cinit CODE >527:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
 4 intentry CODE >49:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-99 text3 CODE >49:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-99 text3 CODE >50:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-9F text3 CODE >51:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-A1 text3 CODE >54:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+9A text3 CODE >49:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+9A text3 CODE >50:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+A0 text3 CODE >51:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+A2 text3 CODE >54:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
 42 text2 CODE >106:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
 42 text2 CODE >107:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
 43 text2 CODE >108:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
@@ -135,27 +135,27 @@ A1 text3 CODE >54:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo 
 %SYMTAB
 _i 76 0 COMMON 1 bssCOMMON dist/default/production\PROYECTO_MPLAB.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__Hspace_0 A8 0 ABS 0 - -
+__Hspace_0 A9 0 ABS 0 - -
 __Hspace_1 77 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
+___sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
 _data 118 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 _main E0 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
 btemp 7E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-start 18 0 CODE 0 init C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
+start 18 0 CODE 0 init C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
 __size_of_main 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
@@ -163,13 +163,13 @@ __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
-___stacklo 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
+___stackhi 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+___stacklo 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
 _SPBRGH 9A 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
+___int_sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -205,16 +205,16 @@ __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 A8 0 ABS 0 - -
+__S0 A9 0 ABS 0 - -
 __S1 77 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 132 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
+_isr 134 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_isr 150 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_isr 152 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
 __Lintentry 8 0 CODE 0 intentry -
 __stringtab 10C 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\jocar\AppData\Local\Temp\xcAsgcg.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
 _env_term 84 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
 __end_of_env_term E0 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
 _RCSTAbits 18 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
@@ -238,7 +238,7 @@ __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __ptext1 28 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
 __ptext2 84 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext3 132 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext3 134 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -248,7 +248,7 @@ __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\PROYECTO_MPLAB.production.o
 _TXSTAbits 98 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_data 132 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_data 134 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 __end_of_main 10C 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
@@ -292,11 +292,11 @@ __pstrings 10C 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.product
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text3 0 99 132 F 2
+text3 0 9A 134 F 2
 cstackCOMMON 1 70 70 7 1
 intentry 0 4 8 82 2
 reset_vec 0 0 0 3 2
-strings 0 86 10C 13 2
+strings 0 86 10C 14 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

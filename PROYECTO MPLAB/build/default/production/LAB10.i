@@ -2786,7 +2786,7 @@ extern char * strrichr(const char *, int);
 
 
 char i = 0;
-const char data[13] = "Bienvenido :)";
+const char data[] = "Bienvenido :)";
 
 
 void setup(void);
