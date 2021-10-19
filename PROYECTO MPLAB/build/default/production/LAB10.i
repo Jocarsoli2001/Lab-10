@@ -2744,25 +2744,23 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 32 "LAB10.c" 2
-# 41 "LAB10.c"
-const char data = 10;
-char cont = 0;
-int limite = 0;
+
+
+
+
+
+
+
+
+const char data = 74;
 
 
 void setup(void);
-void divisor(void);
-void tmr0(void);
-void displays(void);
-
-
-int tabla(int a);
-int tabla_p(int a);
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
     if(PIR1bits.RCIF){
-        PORTD = RCREG;
+        PORTB = RCREG;
     }
 
 }
@@ -2771,7 +2769,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
 void main(void) {
     setup();
     while(1){
-        _delay((unsigned long)((500)*(8000000/4000.0)));
+        _delay((unsigned long)((500)*(1000000/4000.0)));
 
         if(PIR1bits.TXIF){
             TXREG = data;
@@ -2787,16 +2785,18 @@ void setup(void){
     ANSELH = 0;
 
     TRISD = 0;
+    TRISB = 0;
 
     PORTD = 0;
+    PORTB = 0;
 
 
-    OSCCONbits.IRCF = 0b111;
+    OSCCONbits.IRCF = 0b100;
     OSCCONbits.SCS = 1;
 
 
     TXSTAbits.SYNC = 0;
-    TXSTAbits.BRGH = 0;
+    TXSTAbits.BRGH = 1;
 
     BAUDCTLbits.BRG16 = 1;
 
@@ -2815,11 +2815,5 @@ void setup(void){
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
 
-    return;
-}
-
-void tmr0(void){
-    INTCONbits.T0IF = 0;
-    TMR0 = 156;
     return;
 }

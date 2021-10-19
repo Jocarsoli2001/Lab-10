@@ -32,30 +32,20 @@
 #include <stdio.h>
 
 //-----------------Definición de frecuencia de cristal---------------
-#define _XTAL_FREQ 8000000
+#define _XTAL_FREQ 1000000
 
 //-----------------------Constantes----------------------------------
-#define  valor_tmr0 156                        // valor_tmr0 = 156 (0.05 ms)
 
 //-----------------------Variables------------------------------------
-const char data = 10;
-char cont = 0;
-int limite = 0;
+const char data = 74;
 
 //------------Funciones sin retorno de variables----------------------
 void setup(void);                               // Función de setup
-void divisor(void);                             // Función para dividir números en dígitos
-void tmr0(void);                                // Función para reiniciar TMR0
-void displays(void);                            // Función para alternar valores mostrados en displays
-
-//-------------Funciones que retornan variables-----------------------
-int tabla(int a);                              // Tabla para traducir valores a displays de 7 segmentos
-int tabla_p(int a);                            // Tabla que traduce valores a displays de 7 segmentos pero con punto decimal incluido
 
 //----------------------Interrupciones--------------------------------
 void __interrupt() isr(void){
     if(PIR1bits.RCIF){
-        PORTD = RCREG;
+        PORTB = RCREG;
     }
     
 }
@@ -79,17 +69,19 @@ void setup(void){
     ANSEL = 0;                                  // Ningun pin analógico
     ANSELH = 0;                                 // Pines digitales
     
-    TRISD = 0;                                  // PORTD como salida                           
+    TRISD = 0;                                  // PORTD como salida  
+    TRISB = 0;
     
     PORTD = 0;                                  // Limpiar PORTD
+    PORTB = 0;
     
     //Configuración del oscilador
-    OSCCONbits.IRCF = 0b111;                    // Oscilador a 8 MHz
+    OSCCONbits.IRCF = 0b100;                    // Oscilador a 1 MHz
     OSCCONbits.SCS = 1;                         // Oscilador interno
     
     //Configuración de TX y RX
     TXSTAbits.SYNC = 0;                         // Transmisión asíncrona
-    TXSTAbits.BRGH = 0;                         // Baud rate a velocidad baja
+    TXSTAbits.BRGH = 1;                         // Baud rate a velocidad baja
     
     BAUDCTLbits.BRG16 = 1;                      // Baud rate de 16 bits
     
@@ -111,9 +103,4 @@ void setup(void){
     return;
 }
 
-void tmr0(void){
-    INTCONbits.T0IF = 0;                        // Limpiar bandera de TIMER 0
-    TMR0 = valor_tmr0;                          // TMR0 = 255
-    return;
-}
 
