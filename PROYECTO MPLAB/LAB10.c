@@ -39,11 +39,13 @@
 
 //-----------------------Variables------------------------------------
 char i = 0;
-const char data[] = "Bienvenido :)";
+const char data[] = "Bienvenido! ¿A qué puerto desea agregar un valor? ===> 1: PUERTO B o 2: PUERTO A";
+int n = sizeof(data);
 
 //------------Funciones sin retorno de variables----------------------
 void setup(void);                               // Función de setup
 void env_term(void);                            // Función para enviar cadena a terminal
+void menu(void);                                // Función que realice el menú
 
 //----------------------Interrupciones--------------------------------
 void __interrupt() isr(void){
@@ -104,14 +106,15 @@ void setup(void){
 }
 
 void env_term(void){
-    while (i < 14){                             // Mientras el valor de i sea menor al largo de la cadena enviada, evaluar instrucción
+    while (i < n){                             // Mientras el valor de i sea menor al largo de la cadena enviada, evaluar instrucción
         if (PIR1bits.TXIF){                     // Si la bandera TXIF es 1, entonces
-            for(i = 0; i<14; i++){              // For loop que recorra el largo de la cadena
+            for(i = 0; i<(n); i++){              // For loop que recorra el largo de la cadena
                 __delay_ms(100);
                 TXREG = data[i];                // TXREG = dato i del array "data"
             }
         }
     }
 }
+
 
 

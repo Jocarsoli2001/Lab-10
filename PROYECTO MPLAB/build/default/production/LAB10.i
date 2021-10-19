@@ -2786,11 +2786,13 @@ extern char * strrichr(const char *, int);
 
 
 char i = 0;
-const char data[] = "Bienvenido :)";
+const char data[] = "Bienvenido! ¿A qué puerto desea agregar un valor? ===> 1: PUERTO B o 2: PUERTO A";
+int n = sizeof(data);
 
 
 void setup(void);
 void env_term(void);
+void menu(void);
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
@@ -2851,9 +2853,9 @@ void setup(void){
 }
 
 void env_term(void){
-    while (i < 14){
+    while (i < n){
         if (PIR1bits.TXIF){
-            for(i = 0; i<14; i++){
+            for(i = 0; i<(n); i++){
                 _delay((unsigned long)((100)*(1000000/4000.0)));
                 TXREG = data[i];
             }

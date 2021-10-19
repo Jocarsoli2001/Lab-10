@@ -11,20 +11,22 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+$C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\PROYECTO_MPLAB.production.o
-cinit CODE 0 F F 5 2
-text1 CODE 0 14 14 2E 2
-text2 CODE 0 42 42 2E 2
-text3 CODE 0 9A 9A F 2
-maintext CODE 0 70 70 16 2
+cinit CODE 0 F F 11 2
+text1 CODE 0 A6 A6 2E 2
+text2 CODE 0 77 77 2F 2
+text3 CODE 0 EA EA F 2
+idataCOMMON CODE 0 F9 F9 2 2
+maintext CODE 0 D4 D4 16 2
 cstackCOMMON COMMON 1 70 70 6 1
 intentry CODE 0 4 4 8 2
-strings STRING 0 86 86 14 2
-bssCOMMON COMMON 1 76 76 1 1
+strings STRING 0 20 20 57 2
+dataCOMMON COMMON 1 76 76 2 1
+bssCOMMON COMMON 1 78 78 1 1
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -41,23 +43,23 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST A9-1FFF 2
+CONST FB-1FFF 2
 ENTRY 3-3 2
-ENTRY A9-1FFF 2
+ENTRY FB-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE A9-1FFF 2
+CODE FB-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 77-7D 1
+COMMON 79-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE A9-1FFF 2
+STRCODE FB-1FFF 2
 STRING 3-3 2
-STRING A9-1FFF 2
+STRING FB-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -72,55 +74,59 @@ STRING A9-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PROYECTO_MPLAB.production.o
-F cinit CODE >504:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
-F cinit CODE >507:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
-F cinit CODE >518:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
-10 cinit CODE >524:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
-10 cinit CODE >526:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
-11 cinit CODE >527:C:\Users\jocar\AppData\Local\Temp\xcAs9io.s
-4 intentry CODE >49:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-9A text3 CODE >49:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-9A text3 CODE >50:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-A0 text3 CODE >51:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-A2 text3 CODE >54:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-42 text2 CODE >106:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-42 text2 CODE >107:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-43 text2 CODE >108:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-49 text2 CODE >109:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-4A text2 CODE >110:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-53 text2 CODE >111:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-5E text2 CODE >112:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-64 text2 CODE >112:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-69 text2 CODE >107:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-6B text2 CODE >107:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-6F text2 CODE >115:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-14 text1 CODE >66:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-14 text1 CODE >69:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-17 text1 CODE >70:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-18 text1 CODE >72:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-1B text1 CODE >73:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-1C text1 CODE >75:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-1F text1 CODE >76:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-20 text1 CODE >79:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-26 text1 CODE >80:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-27 text1 CODE >83:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-28 text1 CODE >84:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-29 text1 CODE >86:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-2C text1 CODE >88:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-30 text1 CODE >89:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-31 text1 CODE >91:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-34 text1 CODE >92:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-35 text1 CODE >93:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-36 text1 CODE >95:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-39 text1 CODE >98:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-3C text1 CODE >99:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-3F text1 CODE >100:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-40 text1 CODE >101:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-41 text1 CODE >104:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-70 maintext CODE >57:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-70 maintext CODE >58:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-75 maintext CODE >60:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
-7D maintext CODE >61:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+F cinit CODE >581:C:\Users\jocar\AppData\Local\Temp\xcAs8r8.s
+F cinit CODE >584:C:\Users\jocar\AppData\Local\Temp\xcAs8r8.s
+F cinit CODE >604:C:\Users\jocar\AppData\Local\Temp\xcAs8r8.s
+14 cinit CODE >605:C:\Users\jocar\AppData\Local\Temp\xcAs8r8.s
+15 cinit CODE >606:C:\Users\jocar\AppData\Local\Temp\xcAs8r8.s
+1A cinit CODE >607:C:\Users\jocar\AppData\Local\Temp\xcAs8r8.s
+1B cinit CODE >611:C:\Users\jocar\AppData\Local\Temp\xcAs8r8.s
+1C cinit CODE >617:C:\Users\jocar\AppData\Local\Temp\xcAs8r8.s
+1C cinit CODE >619:C:\Users\jocar\AppData\Local\Temp\xcAs8r8.s
+1D cinit CODE >620:C:\Users\jocar\AppData\Local\Temp\xcAs8r8.s
+4 intentry CODE >51:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+EA text3 CODE >51:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+EA text3 CODE >52:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+F0 text3 CODE >53:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+F2 text3 CODE >56:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+77 text2 CODE >108:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+77 text2 CODE >109:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+78 text2 CODE >110:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+7E text2 CODE >111:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+80 text2 CODE >112:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+89 text2 CODE >113:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+94 text2 CODE >114:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+9A text2 CODE >114:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+9F text2 CODE >109:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+A1 text2 CODE >109:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+A5 text2 CODE >117:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+A6 text1 CODE >68:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+A6 text1 CODE >71:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+A9 text1 CODE >72:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+AA text1 CODE >74:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+AD text1 CODE >75:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+AE text1 CODE >77:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+B1 text1 CODE >78:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+B2 text1 CODE >81:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+B8 text1 CODE >82:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+B9 text1 CODE >85:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+BA text1 CODE >86:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+BB text1 CODE >88:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+BE text1 CODE >90:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+C2 text1 CODE >91:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+C3 text1 CODE >93:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+C6 text1 CODE >94:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+C7 text1 CODE >95:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+C8 text1 CODE >97:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+CB text1 CODE >100:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+CE text1 CODE >101:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+D1 text1 CODE >102:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+D2 text1 CODE >103:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+D3 text1 CODE >106:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+D4 maintext CODE >59:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+D4 maintext CODE >60:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+D9 maintext CODE >62:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+E1 maintext CODE >63:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -133,50 +139,54 @@ A2 text3 CODE >54:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo 
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_i 76 0 COMMON 1 bssCOMMON dist/default/production\PROYECTO_MPLAB.production.o
+_i 78 0 COMMON 1 bssCOMMON dist/default/production\PROYECTO_MPLAB.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__Hspace_0 A9 0 ABS 0 - -
-__Hspace_1 77 0 ABS 0 - -
+__Hspace_0 FB 0 ABS 0 - -
+__Hspace_1 79 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
-_data 118 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
-_main E0 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
+___sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
+_data 4C 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+_main 1A8 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
 btemp 7E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-start 18 0 CODE 0 init C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+start 18 0 CODE 0 init C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
 __size_of_main 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+__HdataCOMMON 0 0 ABS 0 dataCOMMON -
+intlevel0 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
+__pidataCOMMON 1F2 0 CODE 0 idataCOMMON dist/default/production\PROYECTO_MPLAB.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
+__LdataCOMMON 0 0 ABS 0 dataCOMMON -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
-___stacklo 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+___stackhi 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
+___stacklo 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
+__LidataCOMMON 0 0 ABS 0 idataCOMMON -
 __size_of_setup 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
 _SPBRGH 9A 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
+___int_sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 28 0 CODE 0 cinit -
+__Hcinit 40 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
-__stringbase 116 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+__stringbase 4A 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
@@ -205,51 +215,52 @@ __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 A9 0 ABS 0 - -
-__S1 77 0 ABS 0 - -
+__S0 FB 0 ABS 0 - -
+__S1 79 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 134 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
+_isr 1D4 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_isr 152 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
+__HidataCOMMON 0 0 ABS 0 idataCOMMON -
+__end_of_isr 1F2 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
 __Lintentry 8 0 CODE 0 intentry -
-__stringtab 10C 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\jocar\AppData\Local\Temp\xcAs9io.o
-_env_term 84 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_env_term E0 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
+__stringtab 40 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\jocar\AppData\Local\Temp\xcAs8r8.o
+_env_term EE 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_env_term 14C 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
 _RCSTAbits 18 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__pmaintext E0 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
+__pmaintext 1A8 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-__end_of__stringtab 118 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+__end_of__stringtab 4C 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 76 0 COMMON 1 bssCOMMON dist/default/production\PROYECTO_MPLAB.production.o
+__pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/production\PROYECTO_MPLAB.production.o
 _PIR1bits C 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __Lend_init 18 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 20 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
+end_of_initialization 38 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
 __Hintentry 18 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
-__ptext1 28 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext2 84 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
-__ptext3 134 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext1 14C 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext2 EE 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
+__ptext3 1D4 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization 20 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
+__end_of__initialization 38 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\PROYECTO_MPLAB.production.o
 _TXSTAbits 98 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_data 134 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_main 10C 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_data EE 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_main 1D4 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
@@ -258,15 +269,16 @@ _SPBRG 99 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 _TXREG 19 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-__end_of_setup 84 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
+__end_of_setup 1A8 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\PROYECTO_MPLAB.production.o
-_setup 28 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
+_setup 14C 0 CODE 0 text1 dist/default/production\PROYECTO_MPLAB.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
-__pstrings 10C 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
+__pdataCOMMON 76 0 COMMON 1 dataCOMMON dist/default/production\PROYECTO_MPLAB.production.o
+__pstrings 40 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -292,11 +304,11 @@ __pstrings 10C 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.product
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text3 0 9A 134 F 2
-cstackCOMMON 1 70 70 7 1
-intentry 0 4 8 82 2
+text2 0 77 EE 84 2
+cstackCOMMON 1 70 70 9 1
+intentry 0 4 8 1C 2
 reset_vec 0 0 0 3 2
-strings 0 86 10C 14 2
+strings 0 20 40 57 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
