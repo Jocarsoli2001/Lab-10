@@ -30,6 +30,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <string.h>
 
 //-----------------Definición de frecuencia de cristal---------------
 #define _XTAL_FREQ 1000000
@@ -37,15 +38,17 @@
 //-----------------------Constantes----------------------------------
 
 //-----------------------Variables------------------------------------
-const char data = 74;
+char i = 0;
+const char data[13] = "Bienvenido :)";
 
 //------------Funciones sin retorno de variables----------------------
 void setup(void);                               // Función de setup
+void env_term(void);                            // Función para enviar cadena a terminal
 
 //----------------------Interrupciones--------------------------------
 void __interrupt() isr(void){
-    if(PIR1bits.RCIF){
-        PORTB = RCREG;
+    if(PIR1bits.RCIF){                          // Si la bandera de interrupción de recepción es 1
+        PORTB = RCREG;                          // PORTB = valor recibido
     }
     
 }
@@ -55,10 +58,7 @@ void main(void) {
     setup();                                    // Subrutina de setup
     while(1){
         __delay_ms(500);
-        
-        if(PIR1bits.TXIF){
-            TXREG = data;
-        }
+        env_term();                             // Subrutina para enviar lineas de caracteres a terminal
     }
 }
 
@@ -70,10 +70,10 @@ void setup(void){
     ANSELH = 0;                                 // Pines digitales
     
     TRISD = 0;                                  // PORTD como salida  
-    TRISB = 0;
+    TRISB = 0;                                  // PORTB como salida
     
     PORTD = 0;                                  // Limpiar PORTD
-    PORTB = 0;
+    PORTB = 0;                                  // Limpiar PORTB
     
     //Configuración del oscilador
     OSCCONbits.IRCF = 0b100;                    // Oscilador a 1 MHz
@@ -101,6 +101,17 @@ void setup(void){
     INTCONbits.PEIE = 1;                        // Interrupciones periféricas activadas
     
     return;
+}
+
+void env_term(void){
+    while (i < 14){                             // Mientras el valor de i sea menor al largo de la cadena enviada, evaluar instrucción
+        if (PIR1bits.TXIF){                     // Si la bandera TXIF es 1, entonces
+            for(i = 0; i<14; i++){              // For loop que recorra el largo de la cadena
+                __delay_ms(100);
+                TXREG = data[i];                // TXREG = dato i del array "data"
+            }
+        }
+    }
 }
 
 

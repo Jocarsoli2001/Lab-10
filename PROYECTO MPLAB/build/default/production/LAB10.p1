@@ -19,17 +19,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
 [v _RCREG `Vuc ~T0 @X0 0 e@26 ]
 [p mainexit ]
-"43 LAB10.c
-[; ;LAB10.c: 43: void setup(void);
+"45 LAB10.c
+[; ;LAB10.c: 45: void setup(void);
 [v _setup `(v ~T0 @X0 0 ef ]
 [v F1256 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF1256 ~T0 @X0 0 e ]
 [p i __delay ]
-"1133 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
-[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
-"3387
+"46 LAB10.c
+[; ;LAB10.c: 46: void env_term(void);
+[v _env_term `(v ~T0 @X0 0 ef ]
+"3387 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3449
@@ -144,6 +144,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "482
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 482: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
+"1133
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
+[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
 "10 LAB10.c
 [p x FOSC  =  INTRC_NOCLKOUT ]
 "11
@@ -402,62 +405,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"40 LAB10.c
-[; ;LAB10.c: 40: const char data = 74;
-[v _data `Cuc ~T0 @X0 1 e ]
+"41 LAB10.c
+[; ;LAB10.c: 41: char i = 0;
+[v _i `uc ~T0 @X0 1 e ]
+[i _i
+-> -> 0 `i `uc
+]
+"42
+[; ;LAB10.c: 42: const char data[13] = "Bienvenido :)";
+[v _data `Cuc ~T0 @X0 -> 13 `i e ]
 [i _data
--> -> 74 `i `uc
+:U ..
+-> 66 `c
+-> 105 `c
+-> 101 `c
+-> 110 `c
+-> 118 `c
+-> 101 `c
+-> 110 `c
+-> 105 `c
+-> 100 `c
+-> 111 `c
+-> 32 `c
+-> 58 `c
+-> 41 `c
+..
 ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
-"46
-[; ;LAB10.c: 46: void __attribute__((picinterrupt(("")))) isr(void){
+"49
+[; ;LAB10.c: 49: void __attribute__((picinterrupt(("")))) isr(void){
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-"47
-[; ;LAB10.c: 47:     if(PIR1bits.RCIF){
+"50
+[; ;LAB10.c: 50:     if(PIR1bits.RCIF){
 [e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 140  ]
 {
-"48
-[; ;LAB10.c: 48:         PORTB = RCREG;
+"51
+[; ;LAB10.c: 51:         PORTB = RCREG;
 [e = _PORTB _RCREG ]
-"49
-[; ;LAB10.c: 49:     }
+"52
+[; ;LAB10.c: 52:     }
 }
 [e :U 140 ]
-"51
-[; ;LAB10.c: 51: }
+"54
+[; ;LAB10.c: 54: }
 [e :UE 139 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"54
-[; ;LAB10.c: 54: void main(void) {
+"57
+[; ;LAB10.c: 57: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"55
-[; ;LAB10.c: 55:     setup();
+"58
+[; ;LAB10.c: 58:     setup();
 [e ( _setup ..  ]
-"56
-[; ;LAB10.c: 56:     while(1){
+"59
+[; ;LAB10.c: 59:     while(1){
 [e :U 143 ]
 {
-"57
-[; ;LAB10.c: 57:         _delay((unsigned long)((500)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"59
-[; ;LAB10.c: 59:         if(PIR1bits.TXIF){
-[e $ ! != -> . . _PIR1bits 0 4 `i -> 0 `i 145  ]
-{
 "60
-[; ;LAB10.c: 60:             TXREG = data;
-[e = _TXREG -> _data `uc ]
+[; ;LAB10.c: 60:         _delay((unsigned long)((500)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "61
-[; ;LAB10.c: 61:         }
-}
-[e :U 145 ]
+[; ;LAB10.c: 61:         env_term();
+[e ( _env_term ..  ]
 "62
 [; ;LAB10.c: 62:     }
 }
@@ -539,8 +554,60 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "103
 [; ;LAB10.c: 103:     return;
-[e $UE 146  ]
+[e $UE 145  ]
 "104
 [; ;LAB10.c: 104: }
+[e :UE 145 ]
+}
+"106
+[; ;LAB10.c: 106: void env_term(void){
+[v _env_term `(v ~T0 @X0 1 ef ]
+{
+[e :U _env_term ]
+[f ]
+"107
+[; ;LAB10.c: 107:     while (i < 14){
+[e $U 147  ]
+[e :U 148 ]
+{
+"108
+[; ;LAB10.c: 108:         if (PIR1bits.TXIF){
+[e $ ! != -> . . _PIR1bits 0 4 `i -> 0 `i 150  ]
+{
+"109
+[; ;LAB10.c: 109:             for(i = 0; i<14; i++){
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 14 `i 151  ]
+[e $U 152  ]
+[e :U 151 ]
+{
+"110
+[; ;LAB10.c: 110:                 _delay((unsigned long)((100)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+"111
+[; ;LAB10.c: 111:                 TXREG = data[i];
+[e = _TXREG -> *U + &U _data * -> _i `ux -> -> # *U &U _data `ui `ux `uc ]
+"112
+[; ;LAB10.c: 112:             }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 14 `i 151  ]
+[e :U 152 ]
+}
+"113
+[; ;LAB10.c: 113:         }
+}
+[e :U 150 ]
+"114
+[; ;LAB10.c: 114:     }
+}
+[e :U 147 ]
+"107
+[; ;LAB10.c: 107:     while (i < 14){
+[e $ < -> _i `i -> 14 `i 148  ]
+[e :U 149 ]
+"115
+[; ;LAB10.c: 115: }
 [e :UE 146 ]
 }

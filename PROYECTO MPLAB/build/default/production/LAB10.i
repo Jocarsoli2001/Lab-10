@@ -2745,6 +2745,38 @@ extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 32 "LAB10.c" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
+# 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+# 36 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+# 33 "LAB10.c" 2
 
 
 
@@ -2752,10 +2784,13 @@ extern int printf(const char *, ...);
 
 
 
-const char data = 74;
+
+char i = 0;
+const char data[13] = "Bienvenido :)";
 
 
 void setup(void);
+void env_term(void);
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
@@ -2770,10 +2805,7 @@ void main(void) {
     setup();
     while(1){
         _delay((unsigned long)((500)*(1000000/4000.0)));
-
-        if(PIR1bits.TXIF){
-            TXREG = data;
-        }
+        env_term();
     }
 }
 
@@ -2816,4 +2848,15 @@ void setup(void){
     INTCONbits.PEIE = 1;
 
     return;
+}
+
+void env_term(void){
+    while (i < 14){
+        if (PIR1bits.TXIF){
+            for(i = 0; i<14; i++){
+                _delay((unsigned long)((100)*(1000000/4000.0)));
+                TXREG = data[i];
+            }
+        }
+    }
 }
