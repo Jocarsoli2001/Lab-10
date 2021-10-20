@@ -31,6 +31,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 //-----------------Definición de frecuencia de cristal---------------
 #define _XTAL_FREQ 1000000
@@ -38,19 +39,26 @@
 //-----------------------Constantes----------------------------------
 
 //-----------------------Variables------------------------------------
+int dato = 0;
 char i = 0;
-const char data[] = "Bienvenido! ¿A qué puerto desea agregar un valor? ===> 1: PUERTO B o 2: PUERTO A";
+int dato_escrito[];
+const char data[] = "Bienvenido! A que puerto desea agregar un valor? ===> 1: PUERTO B o 2: PUERTO A";
+const char data_i[] = "Que valor desea ingresar?";
 int n = sizeof(data);
+int num = sizeof(data_i);
 
 //------------Funciones sin retorno de variables----------------------
 void setup(void);                               // Función de setup
 void env_term(void);                            // Función para enviar cadena a terminal
+void env_term1(void);
 void menu(void);                                // Función que realice el menú
 
 //----------------------Interrupciones--------------------------------
 void __interrupt() isr(void){
     if(PIR1bits.RCIF){                          // Si la bandera de interrupción de recepción es 1
-        PORTB = RCREG;                          // PORTB = valor recibido
+        //dato = RCREG;                           // Guardar el valor de RCREG
+        //int dato_tradu = atoi(dato);
+        //PORTB = dato_tradu;
     }
     
 }
@@ -61,6 +69,10 @@ void main(void) {
     while(1){
         __delay_ms(500);
         env_term();                             // Subrutina para enviar lineas de caracteres a terminal
+        
+        if(dato == 0b110001){
+            env_term1();
+        }
     }
 }
 
@@ -106,11 +118,22 @@ void setup(void){
 }
 
 void env_term(void){
-    while (i < n){                             // Mientras el valor de i sea menor al largo de la cadena enviada, evaluar instrucción
+    while (i < n){                              // Mientras el valor de i sea menor al largo de la cadena enviada, evaluar instrucción
         if (PIR1bits.TXIF){                     // Si la bandera TXIF es 1, entonces
-            for(i = 0; i<(n); i++){              // For loop que recorra el largo de la cadena
+            for(i = 0; i<(n); i++){             // For loop que recorra el largo de la cadena
                 __delay_ms(100);
                 TXREG = data[i];                // TXREG = dato i del array "data"
+            }
+        }
+    }
+}
+
+void env_term1(void){
+    while (i < num){                             // Mientras el valor de i sea menor al largo de la cadena enviada, evaluar instrucción
+        if (PIR1bits.TXIF){                      // Si la bandera TXIF es 1, entonces
+            for(i = 0; i<(num); i++){            // For loop que recorra el largo de la cadena
+                __delay_ms(100);
+                TXREG = data_i[i];               // TXREG = dato i del array "data"
             }
         }
     }
