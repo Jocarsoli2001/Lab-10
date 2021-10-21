@@ -2873,22 +2873,22 @@ extern char * ftoa(float f, int * status);
 int dato = 0;
 char i = 0;
 int dato_escrito[];
-const char data[] = "Bienvenido! A que puerto desea agregar un valor? ===> 1: PUERTO B o 2: PUERTO A";
-const char data_i[] = "Que valor desea ingresar?";
+const char data[] = "Bienvenido! A que puerto desea agregar un valor? ===> 1: PUERTO B o 2: PUERTO A\n\r";
+const char data_i[] = "Que valor desea ingresar? Presiona la barra espaciadora cuando termine de ingresar el valor\n\r\n\r\n\r";
 int n = sizeof(data);
 int num = sizeof(data_i);
+int estado = 0;
 
 
 void setup(void);
-void env_term(void);
-void env_term1(void);
-void menu(void);
+void env_pregunta1(void);
+void env_pregunta2(void);
+void verificacion(void);
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
     if(PIR1bits.RCIF){
-
-
+        verificacion();
 
     }
 
@@ -2898,11 +2898,12 @@ void __attribute__((picinterrupt(("")))) isr(void){
 void main(void) {
     setup();
     while(1){
-        _delay((unsigned long)((500)*(1000000/4000.0)));
-        env_term();
-
-        if(dato == 0b110001){
-            env_term1();
+        _delay((unsigned long)((50)*(1000000/4000.0)));
+        if(estado == 0){
+            env_pregunta1();
+        }
+        if(estado == 2){
+            env_pregunta2();
         }
     }
 }
@@ -2916,9 +2917,11 @@ void setup(void){
 
     TRISD = 0;
     TRISB = 0;
+    TRISA = 0;
 
     PORTD = 0;
     PORTB = 0;
+    PORTA = 0;
 
 
     OSCCONbits.IRCF = 0b100;
@@ -2948,24 +2951,50 @@ void setup(void){
     return;
 }
 
-void env_term(void){
+void env_pregunta1(void){
     while (i < n){
         if (PIR1bits.TXIF){
             for(i = 0; i<(n); i++){
-                _delay((unsigned long)((100)*(1000000/4000.0)));
+                _delay((unsigned long)((10)*(1000000/4000.0)));
                 TXREG = data[i];
             }
         }
     }
+    estado = 1;
 }
 
-void env_term1(void){
+void env_pregunta2(void){
     while (i < num){
         if (PIR1bits.TXIF){
             for(i = 0; i<(num); i++){
-                _delay((unsigned long)((100)*(1000000/4000.0)));
+                _delay((unsigned long)((10)*(1000000/4000.0)));
                 TXREG = data_i[i];
             }
         }
     }
+    estado = 3;
+}
+
+void verificacion(void){
+    if(estado == 1){
+        dato = RCREG;
+        estado = 2;
+    }
+    if(dato == 0b110001 & estado == 3){
+        while(RCREG != 32){
+            dato = RCREG;
+            PORTB = dato;
+        }
+        estado = 0;
+        i = 0;
+    }
+    if(dato == 0b110010 & estado == 3){
+        while(RCREG != 32){
+            dato = RCREG;
+            PORTA = dato;
+        }
+        estado = 0;
+        i = 0;
+    }
+
 }

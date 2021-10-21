@@ -11,21 +11,25 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"57 D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+"58 D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
 [v _isr isr `II(v  1 e 1 0 ]
 "67
 [v _main main `(v  1 e 1 0 ]
-"80
+"81
 [v _setup setup `(v  1 e 1 0 ]
-"120
-[v _env_term env_term `(v  1 e 1 0 ]
-"131
-[v _env_term1 env_term1 `(v  1 e 1 0 ]
-"228 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+"123
+[v _env_pregunta1 env_pregunta1 `(v  1 e 1 0 ]
+"135
+[v _env_pregunta2 env_pregunta2 `(v  1 e 1 0 ]
+"147
+[v _verificacion verificacion `(v  1 e 1 0 ]
+"166 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S214 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S220 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -35,13 +39,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "482
-[s S223 . 1 `uc 1 . 1 0 :2:0 
+[s S229 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S228 . 1 `S214 1 . 1 0 `S223 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES228  1 e 1 @11 ]
+[u S234 . 1 `S220 1 . 1 0 `S229 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES234  1 e 1 @11 ]
 [s S22 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -53,7 +57,7 @@
 "553
 [u S30 . 1 `S22 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES30  1 e 1 @12 ]
-[s S151 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S157 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -63,25 +67,29 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1068
-[s S160 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S166 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S164 . 1 `uc 1 . 1 0 :6:0 
+[s S170 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S167 . 1 `uc 1 . 1 0 :6:0 
+[s S173 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S170 . 1 `S151 1 . 1 0 `S160 1 . 1 0 `S164 1 . 1 0 `S167 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES170  1 e 1 @24 ]
+[u S176 . 1 `S157 1 . 1 0 `S166 1 . 1 0 `S170 1 . 1 0 `S173 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES176  1 e 1 @24 ]
 "1133
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1140
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1416
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S195 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S201 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -90,23 +98,23 @@
 `uc 1 ADIE 1 0 :1:6 
 ]
 "1718
-[u S203 . 1 `S195 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES203  1 e 1 @140 ]
-[s S65 . 1 `uc 1 SCS 1 0 :1:0 
+[u S209 . 1 `S201 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES209  1 e 1 @140 ]
+[s S71 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1882
-[s S71 . 1 `uc 1 . 1 0 :4:0 
+[s S77 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S76 . 1 `S65 1 . 1 0 `S71 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES76  1 e 1 @143 ]
-[s S91 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S82 . 1 `S71 1 . 1 0 `S77 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES82  1 e 1 @143 ]
+[s S97 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -116,20 +124,20 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2582
-[s S100 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S106 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S104 . 1 `uc 1 . 1 0 :6:0 
+[s S110 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S107 . 1 `S91 1 . 1 0 `S100 1 . 1 0 `S104 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES107  1 e 1 @152 ]
+[u S113 . 1 `S97 1 . 1 0 `S106 1 . 1 0 `S110 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES113  1 e 1 @152 ]
 "2642
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2704
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
-[s S128 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S134 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -139,40 +147,49 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "3352
-[u S137 . 1 `S128 1 . 1 0 ]
-[v _BAUDCTLbits BAUDCTLbits `VES137  1 e 1 @391 ]
+[u S143 . 1 `S134 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES143  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"43 D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+"42 D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
+[v _dato dato `i  1 e 2 0 ]
+"43
 [v _i i `uc  1 e 1 0 ]
 "45
-[v _data data `DC[80]uc  1 e 80 0 ]
+[v _data data `DC[82]uc  1 e 82 0 ]
 "46
-[v _data_i data_i `DC[26]uc  1 e 26 0 ]
+[v _data_i data_i `DC[98]uc  1 e 98 0 ]
+"49
+[v _estado estado `i  1 e 2 0 ]
 "67
 [v _main main `(v  1 e 1 0 ]
 {
-"77
+"78
 } 0
-"80
+"81
 [v _setup setup `(v  1 e 1 0 ]
 {
-"118
+"121
 } 0
-"131
-[v _env_term1 env_term1 `(v  1 e 1 0 ]
+"135
+[v _env_pregunta2 env_pregunta2 `(v  1 e 1 0 ]
 {
-"140
+"145
 } 0
-"120
-[v _env_term env_term `(v  1 e 1 0 ]
+"123
+[v _env_pregunta1 env_pregunta1 `(v  1 e 1 0 ]
 {
-"129
+"133
 } 0
-"57
+"58
 [v _isr isr `II(v  1 e 1 0 ]
 {
 "64
+} 0
+"147
+[v _verificacion verificacion `(v  1 e 1 0 ]
+{
+"169
 } 0

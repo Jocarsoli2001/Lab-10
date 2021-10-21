@@ -42,23 +42,23 @@
 int dato = 0;
 char i = 0;
 int dato_escrito[];
-const char data[] = "Bienvenido! A que puerto desea agregar un valor? ===> 1: PUERTO B o 2: PUERTO A";
-const char data_i[] = "Que valor desea ingresar?";
+const char data[] = "Bienvenido! A que puerto desea agregar un valor? ===> 1: PUERTO B o 2: PUERTO A\n\r";
+const char data_i[] = "Que valor desea ingresar? Presiona la barra espaciadora cuando termine de ingresar el valor\n\r\n\r\n\r";
 int n = sizeof(data);
 int num = sizeof(data_i);
+int estado = 0;
 
 //------------Funciones sin retorno de variables----------------------
 void setup(void);                               // Función de setup
-void env_term(void);                            // Función para enviar cadena a terminal
-void env_term1(void);
-void menu(void);                                // Función que realice el menú
+void env_pregunta1(void);                       // Función para enviar primera pregunta a terminal
+void env_pregunta2(void);                       // Función para enviar segunda pregunta a terminal
+void verificacion(void);                        // Función para verificar estado de las preguntas y selección de puerto
 
 //----------------------Interrupciones--------------------------------
 void __interrupt() isr(void){
     if(PIR1bits.RCIF){                          // Si la bandera de interrupción de recepción es 1
-        //dato = RCREG;                           // Guardar el valor de RCREG
-        //int dato_tradu = atoi(dato);
-        //PORTB = dato_tradu;
+        verificacion();
+        
     }
     
 }
@@ -67,11 +67,12 @@ void __interrupt() isr(void){
 void main(void) {
     setup();                                    // Subrutina de setup
     while(1){
-        __delay_ms(500);
-        env_term();                             // Subrutina para enviar lineas de caracteres a terminal
-        
-        if(dato == 0b110001){
-            env_term1();
+        __delay_ms(50);
+        if(estado == 0){                        // Si estado = 0
+            env_pregunta1();                    // Entonces mostrar pregunta 1 en terminal
+        }
+        if(estado == 2){                        // Si estado = 2
+            env_pregunta2();                    // Entonces mostrar pregunta 2 en terminal
         }
     }
 }
@@ -85,9 +86,11 @@ void setup(void){
     
     TRISD = 0;                                  // PORTD como salida  
     TRISB = 0;                                  // PORTB como salida
+    TRISA = 0;
     
     PORTD = 0;                                  // Limpiar PORTD
     PORTB = 0;                                  // Limpiar PORTB
+    PORTA = 0;                                  // Limpiar PORTA
     
     //Configuración del oscilador
     OSCCONbits.IRCF = 0b100;                    // Oscilador a 1 MHz
@@ -117,26 +120,52 @@ void setup(void){
     return;
 }
 
-void env_term(void){
+void env_pregunta1(void){
     while (i < n){                              // Mientras el valor de i sea menor al largo de la cadena enviada, evaluar instrucción
         if (PIR1bits.TXIF){                     // Si la bandera TXIF es 1, entonces
             for(i = 0; i<(n); i++){             // For loop que recorra el largo de la cadena
-                __delay_ms(100);
+                __delay_ms(10);
                 TXREG = data[i];                // TXREG = dato i del array "data"
             }
         }
     }
+    estado = 1;                                 // Colocar variable estado en 1
 }
 
-void env_term1(void){
-    while (i < num){                             // Mientras el valor de i sea menor al largo de la cadena enviada, evaluar instrucción
-        if (PIR1bits.TXIF){                      // Si la bandera TXIF es 1, entonces
-            for(i = 0; i<(num); i++){            // For loop que recorra el largo de la cadena
-                __delay_ms(100);
-                TXREG = data_i[i];               // TXREG = dato i del array "data"
+void env_pregunta2(void){
+    while (i < num){                            // Mientras el valor de i sea menor al largo de la cadena enviada, evaluar instrucción
+        if (PIR1bits.TXIF){                     // Si la bandera TXIF es 1, entonces
+            for(i = 0; i<(num); i++){           // For loop que recorra el largo de la cadena
+                __delay_ms(10);
+                TXREG = data_i[i];              // TXREG = dato i del array "data_i"
             }
         }
     }
+    estado = 3;                                 // Colocar variable estado en 3
+}
+
+void verificacion(void){
+    if(estado == 1){                            // Si estado = 1
+        dato = RCREG;                           // variable dato = RCREG
+        estado = 2;                             // Colocar estado en 2
+    }
+    if(dato == 0b110001 & estado == 3){         // Si el usuario presiona 1 en teclado y la variable estado = 3
+        while(RCREG != 32){                     // Mientras barra espaciadora no sea presionada
+            dato = RCREG;                       
+            PORTB = dato;                       // PORTB = RCREG
+        }
+        estado = 0;                             // Estado en 0 e i en 0
+        i = 0;
+    }
+    if(dato == 0b110010 & estado == 3){         // Si el usuario presiona 1 en teclado y la variable estado = 3
+        while(RCREG != 32){                     // Mientras barra espaciadora no sea presionada
+            dato = RCREG;
+            PORTA = dato;                       // PORTA = RCREG
+        }
+        estado = 0;                             // Estado en 0 e i en 0
+        i = 0;
+    }
+    
 }
 
 
