@@ -151,7 +151,7 @@ void verificacion(void){
     }
     if(dato == 0b110001 & estado == 3){         // Si el usuario presiona 1 en teclado y la variable estado = 3
         while(RCREG != 32){                     // Mientras barra espaciadora no sea presionada
-            dato = RCREG;                       
+            dato = RCREG;                      
             PORTB = dato;                       // PORTB = RCREG
         }
         estado = 0;                             // Estado en 0 e i en 0

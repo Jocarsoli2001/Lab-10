@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
+$C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -78,26 +78,26 @@ STRING 21F-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PROYECTO_MPLAB.production.o
-F cinit CODE >702:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-F cinit CODE >705:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-F cinit CODE >743:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-14 cinit CODE >744:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-15 cinit CODE >745:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-1A cinit CODE >746:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-1B cinit CODE >747:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-20 cinit CODE >748:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-21 cinit CODE >749:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-26 cinit CODE >750:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-27 cinit CODE >754:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-28 cinit CODE >755:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-29 cinit CODE >758:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-2A cinit CODE >759:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-2B cinit CODE >760:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-2C cinit CODE >761:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-2D cinit CODE >762:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-2E cinit CODE >768:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-2E cinit CODE >770:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
-2F cinit CODE >771:C:\Users\jocar\AppData\Local\Temp\xcAs2ng.s
+F cinit CODE >702:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+F cinit CODE >705:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+F cinit CODE >743:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+14 cinit CODE >744:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+15 cinit CODE >745:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+1A cinit CODE >746:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+1B cinit CODE >747:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+20 cinit CODE >748:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+21 cinit CODE >749:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+26 cinit CODE >750:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+27 cinit CODE >754:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+28 cinit CODE >755:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+29 cinit CODE >758:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+2A cinit CODE >759:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+2B cinit CODE >760:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+2C cinit CODE >761:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+2D cinit CODE >762:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+2E cinit CODE >768:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+2E cinit CODE >770:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
+2F cinit CODE >771:C:\Users\jocar\AppData\Local\Temp\xcAsabc.s
 4 intentry CODE >58:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
 EC text5 CODE >147:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
 EC text5 CODE >148:D:\Archivos\Documentos\Universidad y colegio\UVG\2021\Segundo Semestre\Programación de Microcontroladores\Laboratorios\Lab 10\Lab-10\PROYECTO MPLAB\LAB10.c
@@ -199,24 +199,24 @@ __Hspace_4 4010 0 ABS 0 - -
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
+___sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
 _data 134 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 _dato 72 0 COMMON 1 bssCOMMON dist/default/production\PROYECTO_MPLAB.production.o
 _main 3BC 0 CODE 0 maintext dist/default/production\PROYECTO_MPLAB.production.o
 btemp 7E 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-start 18 0 CODE 0 init C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
+start 18 0 CODE 0 init C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
 __size_of_env_pregunta1 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_env_pregunta2 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 __end_of_env_pregunta1 35C 0 CODE 0 text3 dist/default/production\PROYECTO_MPLAB.production.o
 __end_of_env_pregunta2 2F4 0 CODE 0 text2 dist/default/production\PROYECTO_MPLAB.production.o
@@ -228,15 +228,15 @@ _ANSELH 189 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __end_of_data_i 134 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
 _verificacion 1D8 0 CODE 0 text5 dist/default/production\PROYECTO_MPLAB.production.o
-___stackhi 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
-___stacklo 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
+___stackhi 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
+___stacklo 0 0 ABS 0 - C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\PROYECTO_MPLAB.production.o
 _SPBRGH 9A 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
 __pcstackBANK0 24 0 BANK0 1 cstackBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 __size_of_verificacion 0 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
+___int_sp 0 0 STACK 2 stack C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -284,7 +284,7 @@ _estado 70 0 COMMON 1 bssCOMMON dist/default/production\PROYECTO_MPLAB.productio
 __end_of_isr 436 0 CODE 0 text4 dist/default/production\PROYECTO_MPLAB.production.o
 __Lintentry 8 0 CODE 0 intentry -
 __stringtab 64 0 STRING 0 strings dist/default/production\PROYECTO_MPLAB.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\jocar\AppData\Local\Temp\xcAs2ng.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\jocar\AppData\Local\Temp\xcAsabc.o
 __pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production\PROYECTO_MPLAB.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _RCSTAbits 18 0 ABS 0 - dist/default/production\PROYECTO_MPLAB.production.o
